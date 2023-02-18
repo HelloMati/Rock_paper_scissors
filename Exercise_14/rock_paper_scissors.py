@@ -7,6 +7,7 @@ while True:
 # gives user choice to play a move
 # created a dictionary of choices for user
 # prompts the user to enter a value of: R, P, S and converts the value into Rock, Paper or Scissors
+
     choices = {"R": "Rock", "P": "Paper", "S": "Scissors"}
 
     player_choice = choices[input("Rock, paper, scissors (R/P/S): ")]
