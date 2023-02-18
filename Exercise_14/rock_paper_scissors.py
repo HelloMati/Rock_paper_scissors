@@ -1,6 +1,7 @@
 # We have imported the Random Module
 import random
 
+
 # while loop to extend game and allow player to end the game or keep playing an infinite amount of times
 while True:
 
@@ -15,6 +16,7 @@ while True:
 # Ask the computer to generate a random value between 0 and 2 and converts the computer's choice. 0 becomes Rock; 1 becomes Paper; 2 becomes Scissors
 # Computer player can randomly select a move from choices 0 to 2
     computer_choice = choices[random.choice(list(choices.keys()))]
+    print(f'You have selected {player_choice} and your opponent has picked {computer_choice}')
 
 # Conditional statements to decide winner of game
 # Compares the user's choice with computer's choice to display a message indicating whether user won, lost or drew against computer
