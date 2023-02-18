@@ -1,6 +1,10 @@
 # We have imported the Random Module
 import random
+import exercise_14_functions
 
+# Welcome message to user using a function
+
+exercise_14_functions.welcome()
 
 # while loop to extend game and allow player to end the game or keep playing an infinite amount of times
 while True:
@@ -31,8 +35,8 @@ while True:
     else:
         print('You have won!')
 
-# Asks the player if they want to replay or leave the game
+# Asks the player if they want to replay or leave the game- used a function
     player_replay = input('Would you like to replay? y/n ')
     if player_replay != 'y':
-        print('You have chosen to not play again. Goodbye!')
+        exercise_14_functions.exit_game()
         break
