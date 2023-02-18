@@ -1,20 +1,15 @@
+# We have imported the Random Module
 import random
 
-# moves = ['Rock','Paper','Scissors']
+while True:
 
-# player_1 = input(f'What would you like to choose? {moves} ')
-# computer_choice = random.choices(moves)
-# print(computer_choice)
+    choices = {"R": "Rock", "P": "Paper", "S": "Scissors"}
 
-choices = {"R": "Rock", "P": "Paper", "S": "Scissors"}
+    player_choice = choices[input("Rock, paper, scissors (R/P/S): ")]
+    computer_choice = choices[random.choice(list(choices.keys()))]
 
-player_choice = choices[input("Rock, paper, scissors (R/P/S): ")]
-computer_choice = choices[random.choice(list(choices.keys()))]
-
-print(player_choice)
-print(computer_choice)
-
-While True()
+    print(player_choice)
+    print(computer_choice)
 
     if player_choice == computer_choice:
         print(f'You have both selected {player_choice}. You are tied!')
@@ -27,4 +22,7 @@ While True()
     else:
         print('You have won!')
 
-
+    player_replay = input('Would you like to replay? y/n ').upper()
+    if player_replay != 'y':
+        print('Thank you for playing. Goodbye!')
+        break
