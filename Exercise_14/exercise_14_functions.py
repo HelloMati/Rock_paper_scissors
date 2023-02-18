@@ -1,22 +1,11 @@
 import random
 
-def say_hello():
-    print('Hello')
-    print('Bonjour')
-    print('Hola')
+def user_input():
+    choices = {"R": "Rock", "P": "Paper", "S": "Scissors"}
+    player_choice = choices[input("Rock, paper, scissors (R/P/S): ")]
+    computer_choice = choices[random.choice(list(choices.keys()))]
 
-# signature of the function
-def say_hello_to_someone(firstname, lastname='Unknown'):
-    print(f'Hello {firstname} {lastname}')
-    print(f'Bonjour {firstname}!')
-    print(f'Your last name is {lastname}')
-
-    while True:
-
-        choices = {"R": "Rock", "P": "Paper", "S": "Scissors"}
-
-        player_choice = choices[input("Rock, paper, scissors (R/P/S): ")]
-        computer_choice = choices[random.choice(list(choices.keys()))]
+    def game_rules():
 
         if player_choice == computer_choice:
             print(f'You have both selected {player_choice}. You are tied!')
@@ -28,8 +17,7 @@ def say_hello_to_someone(firstname, lastname='Unknown'):
             print('Paper wraps rock. You lose!')
         else:
             print('You have won!')
+        return
 
-        player_replay = input('Would you like to replay? y/n ')
-        if player_replay != 'y':
-            print('You have chosen to not play again. Goodbye!')
-            break
+print('-' * 20)
+
