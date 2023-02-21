@@ -1,6 +1,6 @@
-# We have imported the Random Module
 import random
 import exercise_14_functions
+# We have imported the Random Module
 
 # Welcome message to user using a function
 
